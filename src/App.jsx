@@ -1,8 +1,9 @@
 import Banner from './components/banner/Banner'
 import Contact from './components/contact/Contact'
-import Features from './components/features/Features'
+import Skills from './components/skills/Skills'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
+import Projects from './components/projects/Projects'
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <div className="max-w-screen-xl mx-auto">
           <Navbar />
           <Banner />
-          <Features />
+          <Skills />
+          <Projects />
           <Contact />
           <Footer />
         </div>
