@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { socialMedia } from '../../utils/socialMedia';
 
 const Media = () => {
   return (
@@ -9,15 +10,13 @@ const Media = () => {
           Find me in
         </h2>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
+          {socialMedia.map((item, index) => (
+            <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" className="bannerIcon">
+              {item.title === 'github' && <FaGithub />}
+              {item.title === 'twitter' && <FaTwitter />}
+              {item.title === 'linkedin' && <FaLinkedinIn />}
+            </a>
+          ))}
         </div>
       </div>
     </div>

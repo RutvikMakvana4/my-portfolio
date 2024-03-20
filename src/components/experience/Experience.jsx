@@ -1,23 +1,20 @@
-import React from 'react'
-import { skills } from '../../utils/data';
+import React from 'react';
 import Title from '../layouts/Title'
 
-const Skills = () => {
+const Experience = () => {
   return (
     <section
-      id="skills"
+      id="experience"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
         <Title
-          title="MY CODING SKILLS"
-          des="My Skills"
+          title="MY WORK EXPERIENCE"
+          des="My Experience"
         />
       </div>
     </section>
   );
-
 }
 
-
-export default Skills
+export default Experience

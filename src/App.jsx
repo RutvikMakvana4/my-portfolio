@@ -4,7 +4,7 @@ import Skills from './components/skills/Skills'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Projects from './components/projects/Projects'
-
+import Experience from "./components/experience/Experience";
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
           <Navbar />
           <Banner />
           <Skills />
+          <Experience />
           <Projects />
           <Contact />
           <Footer />

@@ -7,6 +7,8 @@ import testimonialOne from "./images/testmonial/testimonialOne.png";
 import testimonialTwo from "./images/testmonial/testimonialTwo.png";
 import quote from "./images/testmonial/quote.png"
 import contactImg from "./images/contact/contactImg.png"
+import solguruzLogo from "./images/experience/solguruz_logo.jpg";
+import iroidLogo from "./images/experience/iroid_logo.jpg";
 
 export {
   logo,
@@ -17,5 +19,7 @@ export {
   testimonialOne,
   testimonialTwo,
   quote,
-  contactImg
+  contactImg,
+  solguruzLogo,
+  iroidLogo
 };
