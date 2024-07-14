@@ -1,47 +1,48 @@
-import bootstrap from '/public/skills/bootstrap.svg';
-import css from '/public/skills/css.svg';
-import firebase from '/public/skills/firebase.svg';
-import git from '/public/skills/git.svg';
-import html from '/public/skills/html.svg';
-import javascript from '/public/skills/javascript.svg';
-import mongoDB from '/public/skills/mongoDB.svg';
-import mysql from '/public/skills/mysql.svg';
-import nextJS from '/public/skills/nextJS.svg';
-import postgresql from '/public/skills/postgresql.svg';
-import react from '/public/skills/react.svg';
-import tailwind from '/public/skills/tailwind.svg';
-import typescript from '/public/skills/typescript.svg';
+import bootstrap from "/skills/bootstrap.svg";
+import css from "/skills/css.svg";
+import firebase from "/skills/firebase.svg";
+import git from "/skills/git.svg";
+import html from "/skills/html.svg";
+import javascript from "/skills/javascript.svg";
+import mongoDB from "/skills/mongoDB.svg";
+import mysql from "/skills/mysql.svg";
+import nextJS from "/skills/nextJS.svg";
+import postgresql from "/skills/postgresql.svg";
+import react from "/skills/react.svg";
+import tailwind from "/skills/tailwind.svg";
+import typescript from "/skills/typescript.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    case 'html':
-        return html;
-    case 'css':
+    case "html":
+      return html;
+    case "css":
       return css;
-    case 'javascript':
+    case "javascript":
       return javascript;
-    case 'next js':
+    case "next js":
       return nextJS;
-    case 'react':
+    case "react":
       return react;
-    case 'typescript':
+    case "typescript":
       return typescript;
-    case 'bootstrap':
+    case "bootstrap":
       return bootstrap;
-    case 'mongodb':
+    case "mongodb":
       return mongoDB;
-    case 'mysql':
+    case "mysql":
       return mysql;
-    case 'postgresql':
+    case "postgresql":
       return postgresql;
-    case 'tailwind':
+    case "tailwind":
       return tailwind;
-    case 'firebase':
+    case "firebase":
       return firebase;
-    case 'git':
+    case "git":
       return git;
     default:
+      console.log(`No image found for skill: ${skillID}`);
       break;
   }
-}
+};
