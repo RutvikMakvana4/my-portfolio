@@ -4,13 +4,15 @@ import ProjectsCard from "./ProjectsCard";
 import ikonic from "/projects/ikonic.png";
 import unlimitedNow from "/projects/unlimitedNow.png";
 import celleey from "/projects/celleey.png";
+import harage from "/projects/harage.png";
 import result from "/projects/result.png";
 
 import {
   ikonicLink,
   unlimitedNowIosLink,
   unlimitedNowAndroidLink,
-  celleeyLink,
+  celleeyAndroidLink,
+  celleeyIosLink,
   resultManagementLink,
 } from "../../utils/data/proejcts";
 
@@ -44,13 +46,14 @@ const Projects = () => {
           title="Celleey"
           des="An E-commerce app for electronics, Celleey offers unlimited cash back rewards on every purchase."
           src={celleey}
-          appStoreLink={celleeyLink}
+          appStoreLink={celleeyIosLink}
+          playStoreLink={celleeyAndroidLink}
         />
 
         <ProjectsCard
           title="Harage - Refurbished App"
           des="A dynamic eCommerce platform where users can seamlessly buy and sell items."
-          src={celleey}
+          src={harage}
         />
 
         <ProjectsCard
