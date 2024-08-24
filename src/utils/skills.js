@@ -6,11 +6,13 @@ import html from "/skills/html.svg";
 import javascript from "/skills/javascript.svg";
 import mongoDB from "/skills/mongoDB.svg";
 import mysql from "/skills/mysql.svg";
-import nextJS from "/skills/nextJS.svg";
 import postgresql from "/skills/postgresql.svg";
 import react from "/skills/react.svg";
 import tailwind from "/skills/tailwind.svg";
 import typescript from "/skills/typescript.svg";
+import nodeJs from "/skills/nodejs.svg";
+import expressJs from "/skills/expressjs.svg";
+import aws from "/skills/aws.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -21,9 +23,7 @@ export const skillsImage = (skill) => {
       return css;
     case "javascript":
       return javascript;
-    case "next js":
-      return nextJS;
-    case "react":
+    case "react js":
       return react;
     case "typescript":
       return typescript;
@@ -41,6 +41,12 @@ export const skillsImage = (skill) => {
       return firebase;
     case "git":
       return git;
+    case "node js":
+      return nodeJs;
+    case "express js":
+      return expressJs;
+    case "aws":
+      return aws;
     default:
       console.log(`No image found for skill: ${skillID}`);
       break;

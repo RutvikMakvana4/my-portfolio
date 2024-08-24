@@ -1,5 +1,3 @@
-import { solguruzLogo, iroidLogo } from "../assets/index";
-
 export const experiences = [
   {
     id: 1,
