@@ -1,19 +1,19 @@
 import logo from "./images/logo.png";
 import bannerImg from "./images/bannerImg.png";
-import projectOne from "./images/projects/projectOne.jpg";
+import ikonic from "/projects/ikonic.png";
 import projectTwo from "./images/projects/projectTwo.jpg";
 import projectThree from "./images/projects/projectThree.jpeg";
 import testimonialOne from "./images/testmonial/testimonialOne.png";
 import testimonialTwo from "./images/testmonial/testimonialTwo.png";
-import quote from "./images/testmonial/quote.png"
-import contactImg from "./images/contact/contactImg.png"
+import quote from "./images/testmonial/quote.png";
+import contactImg from "./images/contact/contactImg.png";
 import solguruzLogo from "./images/experience/solguruz_logo.jpg";
 import iroidLogo from "./images/experience/iroid_logo.jpg";
 
 export {
   logo,
   bannerImg,
-  projectOne,
+  ikonic,
   projectTwo,
   projectThree,
   testimonialOne,
@@ -21,5 +21,5 @@ export {
   quote,
   contactImg,
   solguruzLogo,
-  iroidLogo
+  iroidLogo,
 };
