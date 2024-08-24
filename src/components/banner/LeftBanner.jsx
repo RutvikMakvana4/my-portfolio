@@ -26,9 +26,12 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          I use animation as a third dimension by which to simplify experiences
-          and kuiding thro each and every interaction. I&apos;m not adding
-          motion just to spruce things up, but doing it in ways that.
+          Innovative Backend Developer from Surat, Crafting the Digital Backbone
+          of Tomorrow Relentless in Code, Limitless in Vision To transform
+          complex challenges into elegant, efficient solutions that power the
+          next generation of digital experiences. Where backend logic meets
+          forward-thinking design, and every project is a step toward the
+          future.
         </p>
       </div>
       {/* Media */}
