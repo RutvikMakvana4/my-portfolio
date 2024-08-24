@@ -26,15 +26,27 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          Innovative Backend Developer from Surat, Crafting the Digital Backbone
-          of Tomorrow Relentless in Code, Limitless in Vision To transform
-          complex challenges into elegant, efficient solutions that power the
-          next generation of digital experiences. Where backend logic meets
-          forward-thinking design, and every project is a step toward the
-          future.
+          ⚡ Innovative Backend Developer from Surat, Crafting the Digital
+          Backbone of Tomorrow To transform complex challenges into elegant,
+          efficient solutions that power the next generation of digital
+          experiences. Where backend logic meets forward-thinking design, and
+          every project is a step toward the future.
+        </p>
+        <p
+          className="relative p-6 mt-8 text-lg font-medium text-center text-gray-100 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne 
+    before:content-['“'] before:absolute before:text-5xl before:text-designColor before:top-[-30px] before:left-[-20px] 
+    after:content-['”'] after:absolute after:text-5xl after:text-designColor after:bottom-[-30px] after:right-[-20px] 
+    transition-transform transform hover:scale-105 hover:rotate-1 hover:bg-opacity-100 duration-700 ease-in-out"
+        >
+          <span className="text-2xl font-bold text-designColor">
+            My Mission:
+          </span>
+          <br />
+          <span className="text-xl font-semibold text-white italic">
+            Keep evolving, never stand still.
+          </span>
         </p>
       </div>
-      {/* Media */}
       <Media />
     </div>
   );
