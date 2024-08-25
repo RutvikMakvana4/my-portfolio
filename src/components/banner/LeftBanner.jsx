@@ -26,11 +26,13 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          ⚡ Innovative Backend Developer from Surat, Crafting the Digital
-          Backbone of Tomorrow To transform complex challenges into elegant,
-          efficient solutions that power the next generation of digital
-          experiences. Where backend logic meets forward-thinking design, and
-          every project is a step toward the future.
+          ⚡ I'm a dedicated Backend Developer specializing in Node.js, Express,
+          and cloud technologies. I have a strong passion for learning new
+          technologies, like NestJS, and integrating them into my projects. My
+          focus is on building robust, scalable web applications while
+          continuously expanding my skill set. I'm self-driven, eager to embrace
+          challenges, and thrive in collaborative environments where innovation
+          and teamwork are key.
         </p>
         <p
           className="relative p-6 mt-8 text-lg font-medium text-center text-gray-100 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne 
