@@ -7,8 +7,8 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Software Engineer Intern",
+    title: "Software Engineer",
     company: "Solguruz LLP",
-    duration: "(Jan 2023 - July 2023)",
+    duration: "(Oct 2022 - July 2023)",
   },
 ];

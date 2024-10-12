@@ -6,6 +6,7 @@ import unlimitedNow from "/projects/unlimitedNow.png";
 import celleey from "/projects/celleey.png";
 import harage from "/projects/harage.png";
 import result from "/projects/result.png";
+import towy from "/projects/towy.png";
 
 import {
   ikonicLink,
@@ -61,6 +62,12 @@ const Projects = () => {
           des="Web app for managing college results."
           src={result}
           websiteLink={resultManagementLink}
+        />
+
+        <ProjectsCard
+          title="Towy - Car Service App"
+          des="Comprehensive Car Service App with Customer and Admin Management"
+          src={towy}
         />
       </div>
     </section>
