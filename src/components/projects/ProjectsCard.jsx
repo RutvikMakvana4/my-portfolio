@@ -1,6 +1,5 @@
-import React from "react";
-import { BsGithub } from "react-icons/bs";
 import { FaApple, FaGooglePlay, FaGlobe } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const ProjectsCard = ({
   title,
@@ -11,58 +10,71 @@ const ProjectsCard = ({
   websiteLink,
 }) => {
   return (
-    <div className="w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
-      <div className="w-full h-[80%] overflow-hidden rounded-lg">
-        <img
-          className="w-full h-60 object-cover group-hover:scale-110 duration-300 cursor-pointer"
-          src={src}
-          alt="project"
-        />
-      </div>
-      <div className="w-full mt-5 flex flex-col gap-6">
-        <div>
+    <div className="relative mx-4">
+      <motion.div
+        className="bg-gray-800/50 backdrop-blur-md rounded-xl shadow-lg border border-gray-700/50 p-4 sm:p-6 flex flex-col gap-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Image */}
+        <div className="w-full h-48 sm:h-64 overflow-hidden rounded-lg relative">
+          <img
+            className="w-full h-full object-cover"
+            src={src}
+            alt={title}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg" />
+        </div>
+
+        {/* Text and Links */}
+        <div className="flex flex-col gap-3 text-center">
           <div className="flex items-center justify-between">
-            <h3 className="text-base uppercase text-designColor font-normal">
+            <h3 className="text-base sm:text-lg font-semibold text-white uppercase">
               {title}
             </h3>
             <div className="flex gap-2">
               {websiteLink && (
-                <a
+                <motion.a
                   href={websiteLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900/70 backdrop-blur-sm text-gray-300 hover:text-pink-400 transition-all duration-300"
                 >
-                  <FaGlobe />
-                </a>
+                  <FaGlobe size={18} />
+                </motion.a>
               )}
               {appStoreLink && (
-                <a
+                <motion.a
                   href={appStoreLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900/70 backdrop-blur-sm text-gray-300 hover:text-pink-400 transition-all duration-300"
                 >
-                  <FaApple />
-                </a>
+                  <FaApple size={18} />
+                </motion.a>
               )}
               {playStoreLink && (
-                <a
+                <motion.a
                   href={playStoreLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900/70 backdrop-blur-sm text-gray-300 hover:text-pink-400 transition-all duration-300"
                 >
-                  <FaGooglePlay />
-                </a>
+                  <FaGooglePlay size={18} />
+                </motion.a>
               )}
             </div>
           </div>
-          <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
-            {des}
-          </p>
+          <p className="text-sm sm:text-base text-gray-300">{des}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,56 +1,44 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Media from "./Media";
+import { motion } from "framer-motion";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
-    words: ["Node Js Developer"],
+    words: ["Software Developer"],
     loop: true,
-    typeSpeed: 20,
-    deleteSpeed: 10,
-    delaySpeed: 2000,
+    typeSpeed: 50,
+    deleteSpeed: 20,
+    delaySpeed: 1500,
   });
+
   return (
-    <div className="w-full lgl:w-1/2 flex flex-col gap-20">
-      <div className="flex flex-col gap-5">
-        <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-5xl font-bold text-white">
-          Hi, I&apos;m{" "}
-          <span className="text-designColor capitalize">Rutvik Makvana</span>
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="w-full lg:w-1/2 flex flex-col gap-8 px-4 text-center lg:text-left"
+    >
+      <div className="flex flex-col gap-6">
+        <h4 className="text-lg font-light tracking-wider text-gray-400 uppercase">
+          Welcome to My Portfolio
+        </h4>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
+          Hi, I'm Rutvik Makvana
         </h1>
-        <h2 className="text-4xl font-bold text-white">
-          a <span>{text}</span>
-          <Cursor
-            cursorBlinking="false"
-            cursorStyle="|"
-            cursorColor="#ff014f"
-          />
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white flex justify-center lg:justify-start items-center gap-2">
+          a <span className="text-pink-400">{text}</span>
+          <Cursor cursorStyle="|" cursorColor="#ec4899" />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide">
-          ⚡ I'm a dedicated Backend Developer specializing in Node.js, Express,
-          and cloud technologies. I have a strong passion for learning new
-          technologies, like NestJS, and integrating them into my projects. My
-          focus is on building robust, scalable web applications while
-          continuously expanding my skill set. I'm self-driven, eager to embrace
-          challenges, and thrive in collaborative environments where innovation
-          and teamwork are key.
-        </p>
-        <p
-          className="relative p-6 mt-8 text-lg font-medium text-center text-gray-100 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne 
-    before:content-['“'] before:absolute before:text-5xl before:text-designColor before:top-[-30px] before:left-[-20px] 
-    after:content-['”'] after:absolute after:text-5xl after:text-designColor after:bottom-[-30px] after:right-[-20px] 
-    transition-transform transform hover:scale-105 hover:rotate-1 hover:bg-opacity-100 duration-700 ease-in-out"
-        >
-          <span className="text-2xl font-bold text-designColor">
-            My Mission:
-          </span>
+        <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+          With a commitment to continuous growth, I focus on crafting efficient and effective applications that make a difference. Dive into my projects to see what I can do!        </p>
+        <blockquote className="relative p-6 bg-gray-800/40 backdrop-blur-md rounded-lg shadow-lg text-center lg:text-left text-gray-200 max-w-md mx-auto lg:mx-0 transform hover:scale-105 transition-all duration-500">
+          <span className="text-xl font-semibold text-pink-400">Mission:</span>
           <br />
-          <span className="text-xl font-semibold text-white italic">
-            Keep evolving, never stand still.
-          </span>
-        </p>
+          <span className="text-lg italic">"Evolve relentlessly."</span>
+        </blockquote>
       </div>
       <Media />
-    </div>
+    </motion.div>
   );
 };
 

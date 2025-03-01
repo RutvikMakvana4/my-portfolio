@@ -1,14 +1,20 @@
-// eslint-disable-next-line react/prop-types
-const Title = ({ des }) => {
+import { motion } from "framer-motion";
+
+const Title = ({ title, des }) => {
   return (
-    <div className="flex flex-col gap-4 font-titleFont mb-14">
-      {/* <h3 className="text-sm uppercase font-light text-designColor tracking-wide">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-col gap-3 items-center text-center"
+    >
+      <h3 className="text-lg sm:text-xl font-medium text-gray-400 uppercase tracking-wider">
         {title}
-      </h3> */}
-      <h1 className="text-4xl md:text-5xl text-gray-300 font-bold capitalize">
+      </h3>
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500 capitalize">
         {des}
       </h1>
-    </div>
+    </motion.div>
   );
 };
 

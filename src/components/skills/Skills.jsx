@@ -1,61 +1,59 @@
-import { skillsData } from "../../utils/data/skills";
-import { skillsImage } from "../../utils/skills";
-import Marquee from "react-fast-marquee";
+import { skills } from "../../utils/data/personalData";
 import Title from "../layouts/Title";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <div
+    <section
       id="skills"
-      className="relative w-full py-20 border-b-[1px] border-b-black bg-gradient-to-r from-bodyColor to-[#202327]" // Gradient background
+      className="relative w-full py-16 px-4 bg-gradient-to-br from-gray-900 to-black border-b border-gray-800"
     >
-      <div className="absolute inset-0">
-        <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="w-32 h-32 bg-pink-500/20 rounded-full absolute top-10 left-1/2 transform -translate-x-1/2 blur-3xl opacity-30" />
+        <div className="w-48 h-48 bg-purple-500/20 rounded-full absolute bottom-10 right-1/4 blur-3xl opacity-30" />
       </div>
 
-      <div className="relative z-10 flex justify-center items-center text-center">
-        <Title title="MY SKILLS" des="My Skills" />
-      </div>
+      {/* Title Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 flex justify-center items-center text-center mb-12"
+      >
+        <Title title="My Skills" des="What I Excel At" />
+      </motion.div>
 
-      <div className="relative z-10 w-full my-12">
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          {skillsData.map((skill, id) => (
-            <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
-              key={id}
-            >
-              <div className="w-full h-full rounded-lg border bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-900 transition-colors duration-1000">
-                <div className="flex -translate-y-[1px] justify-center">
-                  <div className="w-3/4">
-                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
-                  </div>
-                </div>
-                <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
-                    <img
-                      src={skillsImage(skill)}
-                      alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
-                    />
-                  </div>
-                  <p className="text-white text-sm sm:text-lg">{skill}</p>
-                </div>
-              </div>
+      {/* Skills Grid */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8"
+      >
+        {skills.map((skill, id) => (
+          <motion.div
+            key={id}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: id * 0.1 }}
+            className="flex flex-col items-center justify-center rounded-xl"
+          >
+            <div className="w-full max-w-[150px] aspect-square bg-gray-800/40 backdrop-blur-md rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center gap-3">
+              {/* Skill Icon */}
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="h-8 sm:h-10 w-auto object-contain rounded"
+              />
+              <p className="text-white text-sm sm:text-base font-medium text-center">
+                {skill.name}
+              </p>
             </div>
-          ))}
-        </Marquee>
-      </div>
-    </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
   );
 };
 
