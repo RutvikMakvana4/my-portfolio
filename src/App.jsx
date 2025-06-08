@@ -11,26 +11,23 @@ import Blogs from "./components/blogs/Blog";
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-gray-200 to-gray-300 dark:bg-gradient-to-br dark:from-gray-900 dark:to-black">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/blogs" element={<Blogs />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Banner />} />
+            <Route path="/home" element={<Banner />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blogs" element={<Blogs />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
   );
 };
-
-const MainPage = () => (
-  <>
-    <Banner />
-    <Skills />
-    <Experience />
-    <Projects />
-    <Contact />
-  </>
-);
 
 export default App;
