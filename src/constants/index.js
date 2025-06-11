@@ -29,4 +29,9 @@ export const navLinksdata = [
     title: "Blogs",
     link: "blogs",
   },
+    {
+    _id: 1007,
+    title: "Code Clash ⚡",
+    link: "code-clash",
+  },
 ];

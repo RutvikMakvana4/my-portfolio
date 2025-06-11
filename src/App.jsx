@@ -7,6 +7,9 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Blogs from "./components/blogs/Blog";
+import CodeClash from './components/codeClash/CodeClash';
+import CodeClashQuiz from "./components/codeClash/CodeClashQuiz";
+import LeaderboardPage from "./components/codeClash/LeaderBoard";
 
 const App = () => {
   return (
@@ -22,6 +25,9 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/code-clash" element={<CodeClash />} />
+            <Route path="/code-clash/quiz" element={<CodeClashQuiz />} />
+            <Route path="/code-clash/leaderboard" element={<LeaderboardPage />} />
           </Routes>
         </main>
         <Footer />
