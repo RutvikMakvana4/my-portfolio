@@ -41,38 +41,74 @@ const Experience = () => {
 
           {experiences.map((exp, index) => {
             const IconComponent = iconMap[exp.icon];
+            const isEven = index % 2 === 0;
+
             return (
               <div
                 key={exp.id}
                 className="relative flex flex-col sm:flex-row sm:items-center mb-12"
               >
-                {/* Experience Card */}
-                <div className="w-full sm:w-1/2 px-4 sm:text-right">
-                  <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className={`bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-md rounded-lg p-4 sm:p-6 flex flex-col sm:flex-row ${
-                      index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
-                    } items-center gap-4 shadow-lg`}
-                  >
-                    {IconComponent && (
-                      <IconComponent className="w-16 h-16 sm:w-20 sm:h-20 text-pink-400" />
-                    )}
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{exp.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.company}</p>
-                      <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.duration}</p>
-                      <p className="text-gray-600 dark:text-gray-200 mt-2">{exp.description}</p>
+                {/* If even index, content on left */}
+                {isEven && (
+                  <>
+                    {/* Experience Card on left */}
+                    <div className="w-full sm:w-1/2 px-4 sm:text-right">
+                      <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        className="bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-md rounded-lg p-4 sm:p-6 flex items-center gap-4 shadow-lg"
+                      >
+                        {IconComponent && (
+                          <IconComponent className="w-16 h-16 sm:w-20 sm:h-20 text-pink-400" />
+                        )}
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{exp.title}</h3>
+                          <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.company}</p>
+                          <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.duration}</p>
+                          <p className="text-gray-600 dark:text-gray-200 mt-2">{exp.description}</p>
+                        </div>
+                      </motion.div>
                     </div>
-                  </motion.div>
-                </div>
 
-                {/* Marker on the Path */}
-                <div className="absolute right-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-4 h-4 bg-pink-400 rounded-full border-4 border-gray-100 dark:border-gray-900" />
+                    {/* Timeline Dot */}
+                    <div className="absolute right-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-4 h-4 bg-pink-400 rounded-full border-4 border-gray-100 dark:border-gray-900" />
 
-                {/* Empty Space on the Other Side (Hidden on Mobile) */}
-                <div className="hidden sm:block sm:w-1/2" />
+                    {/* Empty Side on Right */}
+                    <div className="hidden sm:block sm:w-1/2" />
+                  </>
+                )}
+
+                {/* If odd index, content on right */}
+                {!isEven && (
+                  <>
+                    {/* Empty Side on Left */}
+                    <div className="hidden sm:block sm:w-1/2" />
+
+                    {/* Timeline Dot */}
+                    <div className="absolute right-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-4 h-4 bg-pink-400 rounded-full border-4 border-gray-100 dark:border-gray-900" />
+
+                    {/* Experience Card on Right */}
+                    <div className="w-full sm:w-1/2 px-4 sm:text-left">
+                      <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        className="bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-md rounded-lg p-4 sm:p-6 flex items-center gap-4 shadow-lg"
+                      >
+                        {IconComponent && (
+                          <IconComponent className="w-16 h-16 sm:w-20 sm:h-20 text-pink-400" />
+                        )}
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{exp.title}</h3>
+                          <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.company}</p>
+                          <p className="text-gray-500 dark:text-gray-300 text-sm">{exp.duration}</p>
+                          <p className="text-gray-600 dark:text-gray-200 mt-2">{exp.description}</p>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </>
+                )}
               </div>
             );
           })}

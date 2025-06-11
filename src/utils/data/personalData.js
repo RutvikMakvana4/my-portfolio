@@ -76,12 +76,18 @@ export const skills = [
 export const experiences = [
     {
         id: 1,
-        title: "Node Js Developer",
-        company: "iRoid Solutions",
-        duration: "(July 2023 - Present)",
+        title: "Senior Node Js Developer",
+        company: "Dignizant Technologies LLP",
+        duration: "(March 2024 - Present)",
     },
     {
         id: 2,
+        title: "Node Js Developer",
+        company: "iRoid Solutions",
+        duration: "(July 2023 - Feb 2023)",
+    },
+    {
+        id: 3,
         title: "Software Engineer",
         company: "Solguruz LLP",
         duration: "(Oct 2022 - July 2023)",
